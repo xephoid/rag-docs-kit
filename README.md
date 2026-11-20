@@ -9,6 +9,10 @@ similarity threshold, not a fact check (see [Limits](#limits-of-the-abstention-t
 An OpenAI-compatible LLM or embedding backend can be plugged in with
 environment variables, but the default path never touches the network.
 
+> **How it was built:** developed with AI assistance and fully human-reviewed — the eval harness and the
+> sandboxed CI run above are the verification record. If it saves you time, consider
+> [sponsoring the work](https://github.com/sponsors/xephoid).
+
 The runtime needs only `typer` and `pydantic`. There are no model downloads and
 no numpy or sklearn.
 
