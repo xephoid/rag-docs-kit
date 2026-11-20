@@ -1,0 +1,97 @@
+[
+  {
+    "id": "h01",
+    "category": "answerable",
+    "question": "How often do clients poll the server for changes?",
+    "answer": "Every 15 seconds by default (poll_interval_seconds).",
+    "gold_chunk_ids": ["configuration.md#sync-behavior/0"]
+  },
+  {
+    "id": "h02",
+    "category": "answerable",
+    "question": "Where do ignore rules for syncing live?",
+    "answer": "In a .tidepoolignore file at the root of a synced folder.",
+    "gold_chunk_ids": ["troubleshooting.md#files-are-not-syncing/0"]
+  },
+  {
+    "id": "h03",
+    "category": "answerable",
+    "question": "How long do web console sessions last?",
+    "answer": "They expire after 12 hours of inactivity.",
+    "gold_chunk_ids": ["security.md#session-lifetime/0"]
+  },
+  {
+    "id": "h04",
+    "category": "answerable",
+    "question": "Which payment methods are accepted?",
+    "answer": "Major credit cards, and bank transfer against a net-30 invoice on Business plans.",
+    "gold_chunk_ids": ["billing.md#invoices-and-payment-methods/0"]
+  },
+  {
+    "id": "h05",
+    "category": "answerable",
+    "question": "What are the minimum server requirements?",
+    "answer": "Linux (x86_64 or arm64), at least 1 GB of RAM and 2 GB of free disk beyond synced data.",
+    "gold_chunk_ids": ["getting-started.md#system-requirements/0"]
+  },
+  {
+    "id": "h06",
+    "category": "out_of_domain",
+    "question": "Who won the 1998 football World Cup?",
+    "answer": "Not found in these docs."
+  },
+  {
+    "id": "h07",
+    "category": "out_of_domain",
+    "question": "How do I bake sourdough bread at home?",
+    "answer": "Not found in these docs."
+  },
+  {
+    "id": "h08",
+    "category": "out_of_domain",
+    "question": "What is the boiling point of water in Kelvin?",
+    "answer": "Not found in these docs."
+  },
+  {
+    "id": "h09",
+    "category": "out_of_domain",
+    "question": "Can you recommend a good science fiction novel?",
+    "answer": "Not found in these docs."
+  },
+  {
+    "id": "h10",
+    "category": "out_of_domain",
+    "question": "What is the population of Tokyo?",
+    "answer": "Not found in these docs."
+  },
+  {
+    "id": "h11",
+    "category": "unanswerable",
+    "question": "Can I extend teammate invitations to 90 days?",
+    "answer": "Not found in these docs (only the 7-day default expiry is documented)."
+  },
+  {
+    "id": "h12",
+    "category": "unanswerable",
+    "question": "How do I migrate a workspace to another Tidepool server?",
+    "answer": "Not found in these docs."
+  },
+  {
+    "id": "h13",
+    "category": "unanswerable",
+    "question": "What is the maximum number of workspaces per server?",
+    "answer": "Not found in these docs."
+  },
+  {
+    "id": "h14",
+    "category": "unanswerable",
+    "question": "How do I rotate the server master key?",
+    "answer": "Not found in these docs."
+  },
+  {
+    "id": "h15",
+    "category": "unanswerable",
+    "question": "Does Tidepool offer a discount for nonprofit organizations?",
+    "answer": "Not found in these docs."
+  }
+]

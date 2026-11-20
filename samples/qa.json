@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q01",
+    "question": "What port does the web console use by default?",
+    "answer": "Port 8443.",
+    "gold_chunk_ids": ["getting-started.md#installation/0", "configuration.md#network-settings/0"]
+  },
+  {
+    "id": "q02",
+    "question": "How long do I have to ask for my money back?",
+    "answer": "A full refund is available within 30 days of the first paid purchase.",
+    "gold_chunk_ids": ["billing.md#refunds/0"]
+  },
+  {
+    "id": "q03",
+    "question": "How much does the Business plan cost per seat?",
+    "answer": "$15 per seat per month.",
+    "gold_chunk_ids": ["billing.md#plans/0"]
+  },
+  {
+    "id": "q04",
+    "question": "How long are old file versions kept and how do I change it?",
+    "answer": "30 days by default; change it with version_retention_days.",
+    "gold_chunk_ids": ["configuration.md#storage-settings/0"]
+  },
+  {
+    "id": "q05",
+    "question": "What happens when a workspace runs out of storage quota?",
+    "answer": "At 90 percent admins get a warning email; at 100 percent new uploads are rejected.",
+    "gold_chunk_ids": ["configuration.md#storage-quotas/0"]
+  },
+  {
+    "id": "q06",
+    "question": "What encryption is used for files at rest?",
+    "answer": "AES-256-GCM with a per-workspace key wrapped by a server master key.",
+    "gold_chunk_ids": ["security.md#encryption/0"]
+  },
+  {
+    "id": "q07",
+    "question": "How do I fix the client saying the certificate is not trusted?",
+    "answer": "Install a certificate from a public CA or distribute your internal CA to clients.",
+    "gold_chunk_ids": ["troubleshooting.md#client-cannot-connect/0"]
+  },
+  {
+    "id": "q08",
+    "question": "Two people edited the same file at once. What does Tidepool do?",
+    "answer": "It keeps both copies and renames the second with a conflict suffix.",
+    "gold_chunk_ids": ["troubleshooting.md#sync-conflicts/0"]
+  },
+  {
+    "id": "q09",
+    "question": "How long before a teammate invitation expires?",
+    "answer": "Invitations expire after 7 days.",
+    "gold_chunk_ids": ["getting-started.md#inviting-teammates/0"]
+  },
+  {
+    "id": "q10",
+    "question": "Can we sign in with SAML single sign-on?",
+    "answer": "Yes, on the Business plan via SAML 2.0 or OpenID Connect.",
+    "gold_chunk_ids": ["security.md#authentication/0", "billing.md#plans/0"]
+  }
+]

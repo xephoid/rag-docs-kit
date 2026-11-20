@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The only step with network access: collect every wheel the install needs.
+      - name: Build wheelhouse
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip download --dest wheelhouse "setuptools>=68"
+          python -m pip wheel --wheel-dir wheelhouse ".[dev]"
+
+      - name: Install from the wheelhouse only (no index)
+        run: python -m pip install --no-index --find-links wheelhouse -e ".[dev]"
+
+      - name: Lint
+        run: |
+          ruff check .
+          ruff format --check .
+
+      - name: Allow unprivileged network namespaces
+        run: |
+          if [ -e /proc/sys/kernel/apparmor_restrict_unprivileged_userns ]; then
+            sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+          fi
+
+      - name: Tests and demo with networking disabled
+        run: |
+          unshare --user --map-root-user --net bash -euo pipefail -c '
+            if python -c "import socket; socket.create_connection((\"1.1.1.1\", 53), timeout=3)"; then
+              echo "network is reachable inside the namespace; refusing to continue" >&2
+              exit 1
+            fi
+            pytest -q
+            bash scripts/check_demo.sh
+          '
